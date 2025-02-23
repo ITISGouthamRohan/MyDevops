@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         EC2_IP = '3.7.69.38'
-        DEPLOY_DIR = '/usr/share/nginx/html'
+        DEPLOY_DIR = '/var/www/html'
     }
 
     stages {
