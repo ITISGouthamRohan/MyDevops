@@ -18,7 +18,7 @@ pipeline {
                 script {
                     sshagent(['ec2-ssh-key']) {
                         sh """
-                            scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/NginxDeploy/index.html ec2-user@${EC2_IP}:${DEPLOY_DIR}/
+                            scp -o StrictHostKeyChecking=no index.html ec2-user@${EC2_IP}:${DEPLOY_DIR}/
                         """
                         sh """
                             ssh -o StrictHostKeyChecking=no ec2-user@${EC2_IP} 'sudo systemctl restart nginx'
