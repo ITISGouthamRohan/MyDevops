@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        EC2_IP = '15.206.149.164'
+        EC2_IP = '13.235.75.23'
         DEPLOY_DIR = '/var/www/html'
     }
 
